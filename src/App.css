@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+.backtest__controller {
+  background: #d8d8d8;
+  padding: 50px 100px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.backtest__controller .app__segment {
+  width: 500px;
+  margin: auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.backtest__controller .app__segment h5 {
+  margin-right: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.backtest__controller .app__segment,
+.backtest__controller .app__segment .controller {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.backtest__controller .app__segment .controller div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.backtest__controller .app__segment .controller .futures {
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+.backtest__controller .app__segment .controller .options {
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+.backtest__controller .app__segment .controller .active__controller {
+  background: #453ea1;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+/* Legs Options Styles */
+.backtest__controller .leg__options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 1080px;
+  margin: 30px auto;
+}
+.backtest__controller .leg__options {
+  min-width: 100px;
+}
+.backtest__controller .leg__options label {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+}
+.backtest__controller .leg__options input,
+.backtest__controller .leg__options select,
+.additional__settings .setting__value select,
+.additional__settings .setting__value input {
+  margin-top: 10px;
+  min-width: 50px;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  height: 30px;
+  padding: 0 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.backtest__controller .leg__options input {
+  width: 100px;
+}
+.backtest__controller .action__buttons,
+.backtest__controller .submit__action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.backtest__controller .action__buttons button, .backtest__controller .submit__action button {
+  width: 150px;
+  height: 30px;
+  border: none;
+  border-radius: 100px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.backtest__controller .action__buttons .add__leg, .backtest__controller .submit__action button {
+  background: #453ea1;
+  color: #fff;
+}
+.backtest__controller .action__buttons .cancel {
+  color: #453ea1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* All Legs */
+.backtest__controller .all__legs {
+  padding: 20px 50px;
+}
+.backtest__controller .all__legs .single__leg {
+  padding: 20px 20px;
+  background: #efefef;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.backtest__controller .all__legs .single__leg select,
+.additional__settings select {
+  background: #453ea1;
+  color: #fff;
+}
+.additional__settings,
+.additional__settings .setting .name {
+  display: flex;
+  align-items: center;
+}
+.additional__settings {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* min-width: 300px; */
+  font-size: 13px;
+}
+.additional__settings .setting {
+  margin-bottom: 20px;
+  width: 250px;
+}
+.additional__settings .setting .name input {
+  margin-right: 5px;
+}
+.additional__settings .setting__value {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.additional__settings .setting__value input {
+  width: 50px;
+  margin-left: 20px;
+}
+
+/* Leg actions */
+.single__leg {
+  position: relative;
+}
+.single__leg i {
+  position: absolute;
+  right: -14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.single__leg .delete {
+  background: #FF74B1;
+  top: -10px;
+}
+.single__leg .copy {
+  background: #DFD3C3;
+  top: 50px;
 }
